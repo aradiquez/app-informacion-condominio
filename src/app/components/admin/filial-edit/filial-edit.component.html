@@ -1,0 +1,113 @@
+<form [formGroup]="filialEditForm" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="id" />
+    <mat-form-field class="full">
+      <input matInput placeholder="Filial Number" formControlName="number">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="Filial Name" formControlName="filial_name">
+    </mat-form-field>
+    <div formArrayName="condominiums">
+        <div *ngFor="let condominia of CondominiumsForm.controls; let i = index" [formGroupName]='i'>
+          <input matInput type="hidden" formControlName="id" />
+
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="First Name" formControlName="first_name">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Last Name" formControlName="last_name">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Identification" formControlName="identification">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Phone Number" formControlName="phone_number">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Birthdate" formControlName="birthday">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+  
+          <mat-radio-group formControlName="active">
+            <mat-radio-button value="1">Active</mat-radio-button>
+            <mat-radio-button value="0">Inactive</mat-radio-button>
+          </mat-radio-group>
+  
+          <input type="hidden" matInput formControlName="status" value="1" />
+  
+          <button mat-raise-button color="warn" (click)="removeCondominiums(i)">Remove</button>
+      </div>
+      <button mat-raise-button color="primary" (click)="addCondominiums()">Add Condominum</button>
+    </div>
+  
+
+    
+  <hr/>
+
+  <div formArrayName="condominium_childs">
+      <div *ngFor="let condominium_child of CondominiumChildsForm.controls; let i = index" [formGroupName]='i'>
+        <input matInput type="hidden" formControlName="id" />
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="First Name" formControlName="first_name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Last Name" formControlName="last_name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Identification" formControlName="identification">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Car Plate" formControlName="car_plate">
+        </mat-form-field>
+
+        <button mat-raise-button color="warn" (click)="removeCondominiumChilds(i)">Remove</button>
+    </div>
+    <button mat-raise-button color="primary" (click)="addCondominiumChilds()">Add Condominum Child</button>
+  </div>
+
+  <hr />
+
+    <div formArrayName="authorized_vehicles">
+        <div *ngFor="let authorized_vehicle of AuthorizedVehiclesForm.controls; let i = index" [formGroupName]='i'>
+            <input matInput type="hidden" formControlName="id" />
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Car Plate" formControlName="car_plate">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Brand" formControlName="brand">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Color" formControlName="color">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Style" formControlName="style">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Other" formControlName="other">
+          </mat-form-field>
+  
+          <button mat-raise-button color="warn" (click)="removeAuthorizedVehicles(i)">Remove</button>
+      </div>
+      <button mat-raise-button color="primary" (click)="addAuthorizedVehicles()">Add Authorized Vehicle</button>
+    </div>
+
+  <button class="btn btn-default">Enviar</button>
+
+<h2 class='mat-h2'>Form Value</h2>
+<pre>
+  {{filialEditForm.value | json}}
+</pre>
+
+<a routerLink="/admin/filials">List</a>

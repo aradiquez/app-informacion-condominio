@@ -1,0 +1,23 @@
+<div class="authorized_vehicles" *ngIf="authorized_vehicles">
+  <span class="title">{{ 'FILIAL.VEHICULOS_AUTORIZADOS.NAME' | translate }}</span>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>{{ 'FILIAL.VEHICULOS_AUTORIZADOS.PLACA' | translate }}</th>
+        <th>{{ 'FILIAL.VEHICULOS_AUTORIZADOS.MARCA' | translate }}</th>
+        <th>{{ 'FILIAL.VEHICULOS_AUTORIZADOS.COLOR' | translate }}</th>
+        <th>{{ 'FILIAL.VEHICULOS_AUTORIZADOS.ESTILO' | translate }}</th>
+        <th>{{ 'FILIAL.VEHICULOS_AUTORIZADOS.OTROS' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of authorized_vehicles">
+        <td>{{ vehicle.car_plate }}</td>
+        <td>{{ vehicle.brand }}</td>
+        <td>{{ vehicle.color }}</td>
+        <td>{{ vehicle.style }}</td>
+        <td>{{ vehicle.other }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

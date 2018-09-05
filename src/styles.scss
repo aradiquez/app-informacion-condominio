@@ -1,7 +1,232 @@
 /* You can add global styles to this file, and also import other style files */
+@import './variables';
+
 html, body {
   margin: 0;
   padding: 0;
 
   height: 100%;
+
+  font: 16px Helvetica;
+  * { box-sizing: border-box; }
+}
+/*---------------------------------------------*/
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #adadad;}
+input:-moz-placeholder { color: #adadad;}
+input::-moz-placeholder { color: #adadad;}
+input:-ms-input-placeholder { color: #adadad;}
+
+textarea::-webkit-input-placeholder { color: #adadad;}
+textarea:-moz-placeholder { color: #adadad;}
+textarea::-moz-placeholder { color: #adadad;}
+textarea:-ms-input-placeholder { color: #adadad;}
+
+/*---------------------------------------------*/
+// custom stuff
+
+.active .grid-item .title {
+  padding: 1.4% 2%;
+  display: block;
+  text-align: center;
+  background-color: lighten($color: $baseColor, $amount: 30%);
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0 auto;
+}
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: 50%;
+  height: $imageSmall;
+  width: $imageSmall;
+}
+
+/*---------------------------------------------*/
+a {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*---------------------------------------------*/
+h1,h2,h3,h4,h5,h6 {
+  margin: 0px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+}
+
+ul, li {
+  margin: 0px;
+  list-style-type: none;
+}
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+table {
+  width: 100%;
+  display: table;
+}
+
+.responsive-table {
+    border: 1px solid darken($baseColor, 5%);
+  border-radius: $borderRadius;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  max-width: calc(100% - 2em);
+  margin: 1em auto;
+  overflow: hidden;
+  width: $maxTableSize;
+  background-color: lighten($baseColor, 55%);
+}
+
+table {
+    width: 100%;
+    
+    td, th { 
+      color: darken($baseColor, 10%);
+      padding: $padding; 
+    }
+    
+    td {
+      text-align: center;
+      vertical-align: middle;
+      
+      &:last-child {
+          font-size: 0.95em;
+          line-height: 1.4;
+      }
+    }
+    
+    th { 
+      background-color: lighten($baseColor, 50%);
+      font-weight: bold;
+    }
+    
+    tr {     
+      &:nth-child(2n) { background-color: white; }
+      &:nth-child(2n+1) { background-color: lighten($baseColor, 55%) }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+      background-color: transparent;
+      color: lighten($baseColor, 60%);
+      font-size: 2em;
+      font-weight: 700;
+      padding: 0;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    }
+    
+    img {
+      border: 3px solid;
+      border-color: lighten($baseColor, 50%);
+      height: $imageBig;
+      margin: 0.5rem 0;
+      width: $imageBig;
+    }
+    
+    td {
+      &:first-child { 
+          background-color: lighten($baseColor, 45%); 
+          border-bottom: 1px solid lighten($baseColor, 30%);
+          border-radius: $borderRadius $borderRadius 0 0;
+          position: relative;   
+          top: 0;
+          transform: translateY(0);
+          width: 100%;
+      }
+      
+      &:not(:first-child) {
+          margin: 0;
+          padding: 5px 1em;
+          width: 100%;
+          
+          &:before {
+            font-size: .8em;
+            padding-top: 0.3em;
+            position: relative;
+          }
+      }
+      
+      &:last-child  { padding-bottom: 1rem !important; }
+    }
+    
+    tr {
+      background-color: white !important;
+      border: 1px solid lighten($baseColor, 20%);
+      border-radius: $borderRadius;
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      margin: 0.5rem 0;
+      padding: 0;
+    }
+    
+    .table-users { 
+      border: none; 
+      box-shadow: none;
+      overflow: visible;
+    }
+}
+
+.close_session {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 2rem;
+  color: red;
+  border: 2px solid red;
+  border-radius: 50%;
+  padding: 0 0.8rem 0.4rem 0.8rem;
+  cursor: pointer;
 }

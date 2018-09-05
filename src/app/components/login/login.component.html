@@ -1,0 +1,32 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form class="login100-form validate-form" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+        <span class="login100-form-title p-b-26">
+          Acceso al Sistema
+        </span>
+        <span class="login100-form-title p-b-48">
+          &nbsp;
+        </span>
+
+        <div class="wrap-input100 validate-input" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+          <input type="text" class="input100" name="username" placeholder="Username" [(ngModel)]="model.username" #username="ngModel" required />
+        </div>
+
+        <div class="wrap-input100 validate-input" [ngClass]="{ 'help-block': f.submitted && !password.valid }">
+          <input type="password" class="input100" name="password" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" required />
+        </div>
+
+        <div class="container-login100-form-btn m-t-17">
+          <button class="login100-form-btn login100-form-bgbtn">
+            Login
+          </button>
+        </div>
+
+        <br/>
+        <br/>
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,22 @@
-<div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+<div class="close_session" (click)="disconnect()">
+  <span>x</span>
+</div>
+<div class="container grid-container {{status}}">
+
+  <header class="grid-item" [className]="status">
+    <h1 class="title grid-item">
+      {{ 'PAGES.HOME.TITLE' | translate }}
+    </h1>
+
+    <div class="form-wrapper grid-item">
+      <label>{{ 'PAGES.HOME.FIELD.FILIAL_NUMBER' | translate }}</label>
+      <input type="search" id="search" placeholder="" [formControl]="searchField" />
+    </div>
+  </header>
+
+  <app-filial *ngIf="filialInformation | async as filial" [filial]="filial" class="grid-item"></app-filial>
+
+</div>
+<div id="ADMIN" *ngIf="creds?.user_type == 3">
+  <button (click)="goAdmin()" class="admin">Administrador de Contenido</button>
 </div>

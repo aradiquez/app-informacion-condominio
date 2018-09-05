@@ -1,0 +1,5 @@
+<span class="questions" *ngFor="let answer of person_question">
+    <strong>{{ answer.question.question }}</strong> &nbsp;&nbsp;
+    <span *ngIf="answer.status == true">{{ 'FILIAL.STATUS.SI' | translate }}</span>
+    <span *ngIf="answer.status == false">{{ 'FILIAL.STATUS.NO' | translate }}</span>
+</span>

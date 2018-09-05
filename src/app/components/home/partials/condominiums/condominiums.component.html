@@ -1,0 +1,25 @@
+<div class="condominium" *ngIf="condominium">
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>{{ 'FILIAL.CONDOMINIUMS.NOMBRE' | translate }}</th>
+        <th>{{ 'FILIAL.CONDOMINIUMS.IDENTIFICATION' | translate }}</th>
+        <th>{{ 'FILIAL.CONDOMINIUMS.TELEFONO' | translate }}</th>
+        <th>{{ 'FILIAL.CONDOMINIUMS.STATUS' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let condomino of condominium">
+        <td>{{ condomino.first_name + ' ' + condomino.last_name }}</td>
+        <td>{{ condomino.identification }}</td>
+        <td>{{ condomino.phone_number }}</td>
+        <td>
+          {{ condomino.status }}
+            <div class="condomino_status" *ngIf="condomino.status === 1; then thenBlock; else elseBlock"></div>
+            <ng-template #thenBlock><span class="label">{{ 'FILIAL.CONDOMINIUMS.PROPIETARIO' | translate }}</span></ng-template>
+            <ng-template #elseBlock><span class="label">{{ 'FILIAL.CONDOMINIUMS.INQUILINO' | translate }}</span></ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

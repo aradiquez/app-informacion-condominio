@@ -1,0 +1,28 @@
+<span *ngFor="let schedule of person_schedule">
+  <table class="responsive-table">
+    <thead>
+      <th colspan="2">{{ 'FILIAL.HORARIO.NAME' | translate }}</th>
+      <th colspan="4"></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ 'FILIAL.HORARIO.HORA_ENTRADA' | translate }}</td>
+        <td>{{ 'FILIAL.HORARIO.HORA_SALIDA' | translate }}</td>
+        
+        <td>{{ 'FILIAL.HORARIO.DAYS.LUNES' | translate }} <div appBoolean [status]="schedule.monday"></div></td>
+        <td>{{ 'FILIAL.HORARIO.DAYS.MARTES' | translate }} <div appBoolean [status]="schedule.tuesday"></div></td>
+        <td>{{ 'FILIAL.HORARIO.DAYS.MIERCOLES' | translate }} <div appBoolean [status]="schedule.wednesday"></div></td>
+        <td>{{ 'FILIAL.HORARIO.DAYS.JUEVES' | translate }} <div appBoolean [status]="schedule.thursday"></div></td>
+      </tr>
+      <tr>
+          <td>{{ schedule.start_time | date: 'mediumTime' }}</td>
+          <td>{{ schedule.end_time | date: 'mediumTime'  }}</td>
+          
+          <td>{{ 'FILIAL.HORARIO.DAYS.VIERNES' | translate }} <div appBoolean [status]="schedule.friday"></div></td>
+          <td>{{ 'FILIAL.HORARIO.DAYS.SABADO' | translate }} <div appBoolean [status]="schedule.saturday"></div></td>
+          <td>{{ 'FILIAL.HORARIO.DAYS.DOMINGO' | translate }} <div appBoolean [status]="schedule.sunday"></div></td>
+          <td>{{ 'FILIAL.HORARIO.DAYS.FERIADOS' | translate }} <div appBoolean [status]="schedule.holidays"></div></td>
+        </tr>
+    </tbody>
+  </table>
+</span>

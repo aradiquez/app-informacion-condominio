@@ -1,0 +1,9 @@
+{
+  "api": {
+    "base_url": "http://localhost:3000/api/v1/"
+  },
+  "config_global_key": "-----BEGIN RSA PRIVATE KEY-----MIICXAIBAAKBgQDdK68d/b7zQ8r14+T0PcIx/aJ5Pp201VgTskhWCatiPsHlVCO0/+vCxOycq/QuTfbaa82rz01C2PUTwPovo12Sh30wXoDbX+bKHGxwuJSZy5pjWu2PQnn24grKy4UFYWoifRPHReG+CQpE0+pBfxFciNfZhIby5FJAywLtikm/OQIDAQABAoGBAK8ZP5nB42QaftuvIftPzafgQro0nYyl/wYQ9n3PR/UO9FkIBQDuQAvB9gWPiVEDfnSsNndYNrW+qECMXkZK0u+ObHKMKiQOQHFGrRCyoL4m99ZEzzAYwQQG8JWsuaaXK3PTUQ7r2ARKyUPdbwAFIuK1aljp2/ibTKjyuZXQJeQRAkEA/f3qcooAJuGEUWN4qseKMCgUeIlmXXXtTG1hY+NcYGtS4pGjmretMDWEV+mEOHLgeflWht9ClC7IBQEBRV2vHQJBAN7rVmXy5e/69T7Ckuske4KRxB4er0lvyrnDYXRiXYtaoy8Z1qyYcYJ+TiF9UgFdt4ale6cprB9sibmJZI5mic0CQFy78HWRXSzU+fKdVtlDsXiTqaW4xN8qx1E4Pm6x/HBXvxNqCUnb9ie74m4WnGffyYW/O5BSw4RG8FCjZUtmQSECQC+W4Cf9lfcIhWizkzfd3vw98DdZ56Pu2MGVo218PmosnF/GzVylYr4wBrABmAswnaiCFYbXT6aZvkE8wpnf7BUCQHJBf35g6lwzkt0MqvDPTW77BscWajJPgYE0O8D1ZrB9R1EwpmWi7UHGfjH3oV7MDMDRMmM3vY5EvPUjzeDm7H4=-----END RSA PRIVATE KEY-----",
+  "global_creds_key": "CRDL",
+  "global_user_key": "+vCxOycq/QuTfbaa82rz01C2PUTwPovo12Sh30wX"
+
+}

@@ -1,0 +1,13 @@
+@import "../../../../../variables.scss";
+.filial-container {
+  display: grid;
+}
+
+.filial_name {
+  font-size: 2rem;
+}
+.filial_number {
+  font-size: 4rem;
+  text-align: center;
+  display: block;
+}

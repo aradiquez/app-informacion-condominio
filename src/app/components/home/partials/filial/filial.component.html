@@ -1,0 +1,36 @@
+<div class="filial-container">
+    <table class="responsive-table">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    {{ 'FILIAL.INFORMATION_FILIAL' | translate }}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <span class="filial_name">{{ 'FILIAL.NAME' | translate }}</span>
+                </td>
+                <td>
+                    <span class="filial_number">{{ filial?.number }}</span>    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    {{ 'FILIAL.ULTIMA_ACTUALIZACION' | translate }} {{ filial?.updated_at | date: 'medium' }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="clear: both;"></div>
+        
+    <app-condominiums [condominium]="filial?.condominiums"></app-condominiums>
+    <app-condominium-childs [condominium_childs]="filial?.condominium_childs"></app-condominium-childs>
+    <app-people [people]="filial?.people" [type]="1"></app-people>
+    <app-authorized-vehicles [authorized_vehicles]="filial?.authorized_vehicles"></app-authorized-vehicles>
+    <app-people [people]="filial?.people" [type]="2"></app-people>
+
+</div>

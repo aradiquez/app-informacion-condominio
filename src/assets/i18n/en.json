@@ -1,7 +1,63 @@
 {
   "PAGES": {
-      "HOME": {
-          "TITLE": "App works !"
+    "HOME": {
+        "TITLE": "Portal: Informacion de Condominos",
+        "FIND_CONDOMINIUM": "Buscar un condomino",
+        "FIELD": {
+          "FILIAL_NUMBER": "Numero de Filial"
+        }
+    }
+  },
+  "FILIAL": {
+    "NAME": "Filial",
+    "INFORMATION_FILIAL": "INFORMACIÓN DEL CONDÓMINO",
+    "ULTIMA_ACTUALIZACION": "Ultima actualización:",
+    "HOJA_DE_SEGURIDAD": "HOJA DE SEGURIDAD",
+    "CONDOMINIUMS": {
+      "NOMBRE": "Nombre Señor(a):",
+      "IDENTIFICATION": "Identificación",
+      "TELEFONO": "Teléfono:",
+      "STATUS": "Estatus",
+      "PROPIETARIO": "PROPIETARIO",
+      "INQUILINO": "INQUILINO"
+    },
+    "NOMBRE_DE_HIJOS": "NOMBRE DE HIJOS",
+    "FAMILIARES_AMIGOS_AUTORIZADOS": "FAMILIARES-AMIGOS AUTORIZADOS",
+    "OTHER_AUTORIZADOS": "Servidora doméstica, Mantenimiento, Niñera, Tutora, otros",
+    "PARTIALS": {
+      "NOMBRE": "NOMBRE",
+      "TELEFONO": "TELÉFONO:",
+      "IDENTIFICACION": "IDENTIFICACIÓN",
+      "NACIONALIDAD": "NACIONALIDAD",
+      "PLACA_VEHICULO": "PLACA VEHÍCULO"
+    },
+    "VEHICULOS_AUTORIZADOS": {
+      "NAME": "VEHÍCULOS AUTORIZADOS",
+      "PLACA": "PLACA",
+      "MARCA": "MARCA",
+      "COLOR": "COLOR",
+      "ESTILO": "ESTILO",
+      "OTROS": "OTROS"
+    },
+    "HORARIO": {
+      "NAME": "HORARIO",
+      "DIAS_LABORALES": "Días Laborales",
+      "HORA_ENTRADA": "HORA ENTRADA",
+      "HORA_SALIDA": "HORA SALIDA",
+      "DAYS": {
+        "LUNES": "Lunes",
+        "MARTES": "Martes",
+        "MIERCOLES": "Miércoles",
+        "JUEVES": "Jueves",
+        "VIERNES": "Viernes",
+        "SABADO": "Sábado",
+        "DOMINGO": "Domingo",
+        "FERIADOS": "Feriados"
       }
+    },
+    "STATUS": {
+      "SI": "SI",
+      "NO": "NO"
+    }
   }
 }

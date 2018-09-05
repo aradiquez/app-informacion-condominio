@@ -4,6 +4,9 @@ import * as url from 'url';
 
 let win, serve;
 const args = process.argv.slice(1);
+const Store = require('electron-store');
+const store = new Store();
+
 serve = args.some(val => val === '--serve');
 
 function createWindow() {
@@ -16,7 +19,10 @@ function createWindow() {
     x: 0,
     y: 0,
     width: size.width,
-    height: size.height
+    height: size.height,
+    webPreferences: {
+      webSecurity: false
+    }
   });
 
   if (serve) {
@@ -32,6 +38,8 @@ function createWindow() {
   }
 
   win.webContents.openDevTools();
+
+  store.clear();
 
   // Emitted when the window is closed.
   win.on('closed', () => {

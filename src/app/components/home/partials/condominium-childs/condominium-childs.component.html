@@ -1,0 +1,19 @@
+<div class="condominium_childs" *ngIf="condominium_childs">
+  <span class="title">{{ 'FILIAL.NOMBRE_DE_HIJOS' | translate }}</span>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>{{ 'FILIAL.PARTIALS.NOMBRE' | translate }}</th>
+        <th>{{ 'FILIAL.PARTIALS.IDENTIFICACION' | translate }}</th>
+        <th>{{ 'FILIAL.PARTIALS.PLACA_VEHICULO' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let childs of condominium_childs">
+        <td>{{ childs.first_name + ' ' + childs.last_name }}</td>
+        <td>{{ childs.identification }}</td>
+        <td>{{ childs.car_plate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

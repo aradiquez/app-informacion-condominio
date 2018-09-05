@@ -1,0 +1,24 @@
+@import "./../../../../variables.scss";
+nav {
+  &.nav-container {
+    display: block;
+    height: 4rem;
+    background-color: lighten($baseColor, 30%);
+
+    .nav-list {
+      list-style: none;
+      .nav-item {
+        float: left;
+        margin: 1rem;
+        a {
+          text-decoration: none;
+          color: #FFF;
+          font-weight: bold;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

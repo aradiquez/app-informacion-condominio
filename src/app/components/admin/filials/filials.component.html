@@ -1,0 +1,27 @@
+<div class="filial-list-container">
+  <h2>Filial List</h2>
+  <button class="btn btn-danger" (click)="addFilial()"> Add Filial</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Filial Number</th>
+      <th>Filial Name</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let filial of filials">
+      <td class="hidden"></td>
+      <td>{{filial.number}}</td>
+      <td>{{filial.filial_name}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteFilial(filial)"> Delete</button>
+        <button class="btn btn-danger" (click)="editFilial(filial)" style="margin-left: 20px;"> Edit</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<a routerLink="/admin">Admin home</a>

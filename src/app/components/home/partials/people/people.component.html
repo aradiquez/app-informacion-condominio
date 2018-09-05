@@ -1,0 +1,32 @@
+<div class="people" *ngIf="people">
+  <span class="title" *ngIf="type == 1">{{ 'FILIAL.FAMILIARES_AMIGOS_AUTORIZADOS' | translate }}</span>
+  <span class="title" *ngIf="type == 2">{{ 'FILIAL.OTHER_AUTORIZADOS' | translate }}</span>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>{{ 'FILIAL.PARTIALS.NOMBRE' | translate }}</th>
+        <th *ngIf="type == 2">{{ 'FILIAL.PARTIALS.NACIONALIDAD' | translate }}</th>
+        <th>{{ 'FILIAL.PARTIALS.IDENTIFICACION' | translate }}</th>
+        <th>{{ 'FILIAL.PARTIALS.PLACA_VEHICULO' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let person of (people | peopleTypes: type )">
+      <tr>
+        <td>{{ person.first_name + ' ' + person.last_name }}</td>
+        <td *ngIf="type == 2">{{ person.nationality}}</td>
+        <td>{{ person.identification }}</td>
+        <td>{{ person.car_plate }}</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+            <app-person-question [person_question]="person.person_question" [type]="type"></app-person-question>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <app-person-schedule [person_schedule]="person.person_schedule" *ngIf="type == 2"></app-person-schedule>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
